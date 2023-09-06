@@ -1,0 +1,54 @@
+package collection1;
+
+import java.util.ArrayList;
+
+public class ListTest1_1 {
+
+	public static void main(String[] args) {
+		//listasdlkfsd
+//rlsrmsadkf
+		// 자료의 갯수를 고정하지 않은 상태에서 저장하는 자료구조는 List(인터페이스)
+		
+		// List 인터페이스를 구현한 ArrayList가 있다.
+		// ArrayList 를 만들어보자
+		
+		// generic[포괄적인] : 기본형을 객체로 감싼 타입인 wrapper 클래스인 
+		// - <Integer> <double> 
+		ArrayList <Integer> arrayList = new ArrayList<Integer>();
+		System.out.println(arrayList);
+		
+		arrayList.add(30);
+		System.out.println(arrayList);
+		
+		arrayList.add(40);
+		System.out.println(arrayList);
+		
+		arrayList.add(50);
+		System.out.println(arrayList);
+		
+		arrayList.add(60);		
+		System.out.println(arrayList);
+		arrayList.add(0, 20);
+		System.out.println(arrayList);
+		
+		System.out.println(arrayList.size());
+		
+		int tot = 0;
+		
+		// 1) 인덱싱으로 값을 가져와 누적
+		for(int i = 0; i < arrayList.size(); i++) {
+//			System.out.print(arrayList.get(i));
+//			tot += arrayList.get(i);	
+		}
+		
+		// 향상된 for 문
+		for(int value : arrayList) {
+			tot += value;
+		}
+		System.out.println(tot);
+		int result = tot / arrayList.size();
+		System.out.println(result);
+		
+	}
+
+}
